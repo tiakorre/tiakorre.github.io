@@ -121,10 +121,13 @@
         
 
         .small-image {
-            width: 150px; /* Adjust the size as needed */
-            height: auto;
-            border-radius: 50px;
-        }
+    width: 200px; /* Adjust the size as needed */
+    height: auto;
+    border-radius: 50%; /* Changing to 50% for a perfect circle */
+    box-shadow: 40px 15px 6px rgba(0, 0, 0, 0.1); /* Adjust the shadow values */
+    margin-top: 20px;
+}
+
 
     .bg-color {
         color: E3E9C2;
@@ -206,6 +209,47 @@
         color: #773344; /* Set color of placeholder text */
         font-family: "Roboto Mono", monospace;
     }
+    .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .skill {
+            margin-bottom: 20px;
+            flex-basis: calc(50% - 10px); /* Two columns with some space in between */
+        }
+
+        .skill-name {
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-family: "Press Start 2P", system-ui;
+            font-size: 10px;
+        }
+
+.skill-graph {
+    width: 200px; /* Adjust the width as needed */
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: #8F754F; /* Default color */
+}
+
+.html { width: 80%; } /* Example: HTML skill level */
+.css { width: 70%; } /* Example: CSS skill level */
+.python { width: 90%; } /* Example: Python skill level */
+.r { width: 57%; } 
+.rust { width: 45%; } 
+.sql { width: 60%; } 
+.ssh { width: 40%; } 
+.js { width: 65%; } 
+/* Add more styles as needed */
+
 </style>
 </head>
 
@@ -236,54 +280,111 @@
 </div>
 </nav>
     
-    <div id="home" class="full-width">
-        <div class="container">
-            <div class="row vertical-center">
-                <div class="col-md-6 text-center">
-                    <div class="d-flex align-items-center justify-content-center">
-                         
-                           
-                            <div class="pe-3 press-start-2p-regulari">
-                                <h1 id="typing-effect1"></h1> <br>
-                                <h1 class="ms-auto press-start-2p-regulari" id="typing-effect2"></h1>
-                              
-                            </div>
-                        
-                        <div class="ms-5">
-                            <img src="me.jpg" class="small-image w3-grayscale">
-                        </div>
-                    </div>
+<div id="home" class="full-width">
+    <div class="container">
+        <div class="row vertical-center">
+            <!-- Half width column for the text -->
+            <div class="col-md-6 text-center">
+                <div class="pe-3 press-start-2p-regulari">
+                    <h1 id="typing-effect1"></h1>
+                    <h1 class="ms-auto press-start-2p-regulari" id="typing-effect2"></h1>
                 </div>
-                <div id = "welcome" class = "press-start-2p-regular" style="text-align: center;padding-top: 10%; padding-bottom: 0%;"><p>Welcome to my portfolio!</p></div>
-                <div class="col-md-6 text-center">
-                    
-                    <div class="icon-container">
-                        
-                        <a href="https://www.linkedin.com/in/tia-hannah-90b280103/" class="fa fa-linkedin"></a>
-                        <a href="https://github.com/tiakorre" class="fa fa-github"></a>
-                        <!-- Resume Icon -->
-                        <a href="#Resume" class="fa fa-file-text-o"></a>
-                    </div>
+            </div>
+        
+            <!-- Half width column for the image -->
+            <div class="col-md-6 text-center">
+                <img src="me.jpg" class="small-image w3-grayscale">
+            </div>
+            <!-- Welcome message -->
+            <div id="welcome" class="col-md-12 text-center press-start-2p-regular" style="padding-top: 10%; padding-bottom: 0%;">
+                <p>Welcome to my portfolio!</p>
+            </div>
+            <!-- Social icons -->
+            <div class="col-md-12 text-center">
+                <div class="icon-container">
+                    <a href="https://www.linkedin.com/in/tia-hannah-90b280103/" class="fa fa-linkedin"></a>
+                    <a href="https://github.com/tiakorre" class="fa fa-github"></a>
+                    <!-- Resume Icon -->
+                    <a href="#resume" class="fa fa-file-text-o"></a>
+
                 </div>
             </div>
         </div>
     </div>
+</div>
 
+<br><br><br>
 <!-- ABOUT ME SECTION -->
 <div id="aboutme" class="full-width">
     <div class="container">
         <h2 class="rubik-mono-one-regular">About Me</h2>
-        <p>Add your introduction here. Talk about your background, skills, and interests.</p>
+        <br>
+        <p class="roboto-mono-p bfont-color">Add your introduction here. Talk about your background, skills, and interests.</p>
+        <p class="roboto-mono-p bfont-color">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+        <p class="roboto-mono-p bfont-color">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+        <p class="roboto-mono-p bfont-color">Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+        <!-- Skill visualization -->
+        <br>
+        <div class="skills">
+            <div class="skill">
+                <div class="skill-name">HTML</div>
+                <div class="skill-graph">
+                    <div class="skill-level html"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">CSS</div>
+                <div class="skill-graph">
+                    <div class="skill-level css"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">Python</div>
+                <div class="skill-graph">
+                    <div class="skill-level python"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">Typescript/Javascript</div>
+                <div class="skill-graph">
+                    <div class="skill-level js"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">R</div>
+                <div class="skill-graph">
+                    <div class="skill-level r"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">SQL</div>
+                <div class="skill-graph">
+                    <div class="skill-level sql"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">Rust</div>
+                <div class="skill-graph">
+                    <div class="skill-level rust"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">SSH</div>
+                <div class="skill-graph">
+                    <div class="skill-level ssh"></div>
+                </div>
+            </div>
+        </div>
+        <br>
         <div class="text-center">
             <a href="#contact" class="btn btn-primary rounded-pill me-2" style="background-color: #8F754F; color: #E3E9C2; font-family: 'Roboto Mono', monospace;">Email Me</a>
             <a href="C:\Users\tiako\Downloads\profolioPage\Tia_Hannah_Resume_.pdf" download="Tia_Hannah_Resume_.pdf" class="btn btn-primary rounded-pill" style="background-color: #8F754F; color: #E3E9C2; font-family: 'Roboto Mono', monospace;">Download Resume</a>
         </div>
-        
     </div>
 </div>
 
-
-       
+<br><br>
+        <!-- new -->
 
 <!-- PROJECTS SECTION -->
     <div id="projects" class="full-width">
@@ -313,9 +414,9 @@
                     <div class="carousel-item active">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title"> IMDB Movie and Tv Analysis 
+                                <h5 class="card-title roboto-mono-p bfont-color " style="font-weight: bold;"> IMDB Movie and Tv Analysis 
                                 </h5>
-                                <p class="card-text">
+                                <p class="card-text roboto-mono-p">
                                     This Rust project analyzes a dataset of top movies and TV shows from IMDB, building a graph connecting movies and directors based on metascores. It then calculates the degree centrality of each node.</p>
                                     <button class="btn success">
                                         <a href="https://github.com/tiakorre/imdb-movie-tv-analysis-rust/blob/main/README.md" class="card-link">
@@ -332,9 +433,9 @@
                     <div class="carousel-item">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Pixel Runner Game
+                                <h5 class="card-title roboto-mono-p bfont-color "style="font-weight: bold;">Pixel Runner Game
                                 </h5>
-                                <p class="card-text">Pixel Runner Game is a simple 2D runner built with Python's Pygame library. Players control a character jumping over moving snails to score points.</p>
+                                <p class="card-text roboto-mono-p">Pixel Runner Game is a simple 2D runner built with Python's Pygame library. Players control a character jumping over moving snails to score points.</p>
                                 <button class="btn success">
                                     <a href="https://github.com/tiakorre/Pixel_Runner_Game" class= "card-link">
                                         <span>&rarr;</span>
@@ -346,8 +447,8 @@
                     <div class="carousel-item">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Flight Data Analysis</h5>
-                                <p class="card-text">This project aims to provide comprehensive exploratory data analysis (EDA) of flight data, offering valuable insights into patterns, trends, and anomalies.</p>
+                                <h5 class="card-title roboto-mono-p bfont-color " style="font-weight: bold;">Flight Data Analysis</h5>
+                                <p class="card-text roboto-mono-p">This project aims to provide comprehensive exploratory data analysis (EDA) of flight data, offering valuable insights into patterns, trends, and anomalies.</p>
                                 <button class="btn success">
                                     <a href="https://github.com/tiakorre/EDA_Flight_Data" class= "card-link">
                                         <span>&rarr;</span>
@@ -361,8 +462,8 @@
                     <div class="carousel-item">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Editor AI</h5>
-                                <p class="card-text">Editor AI is a collaborative project under Spark that aims to create an application to assist micro newspapers with editing through an AI-powered style editor.</p>
+                                <h5 class="card-title roboto-mono-p bfont-color " style="font-weight: bold;">Editor AI</h5>
+                                <p class="card-text roboto-mono-p">Editor AI is a collaborative project under Spark that aims to create an application to assist micro newspapers with editing through an AI-powered style editor.</p>
                                 <button class="btn success">
                                     <a href="https://github.com/tiakorre/se-editor-ai" class= "card-link">
                                         <span>&rarr;</span>
@@ -374,8 +475,8 @@
                     <div class="carousel-item">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">MAPLE (Bill Summarization, Tagging, Explanation)</h5>
-                                <p class="card-text">
+                                <h5 class="card-title roboto-mono-p bfont-color " style="font-weight: bold;">MAPLE (Bill Summarization, Tagging, Explanation)</h5>
+                                <p class="card-text roboto-mono-p">
                                     This project simplifies Massachusetts bills for the MAPLE Platform by generating summaries and category tags using machine learning. It aims to make legal language more understandable (9th-grade level) and includes a pipeline for bill processing, a dashboard for text display and saving, and integration into the MAPLE platform.</p>
                                 <button class="btn success">
                                     <a href="https://github.com/tiakorre/ml-maple-bill-summarization" class= "card-link">
@@ -388,8 +489,8 @@
                     <div class="carousel-item">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title"> Data Driven COVID-19 Policy Recommendations</h5>
-                                <p class="card-text">
+                                <h5 class="card-title roboto-mono-p bfont-color " style="font-weight: bold;"> Data Driven COVID-19 Policy Recommendations</h5>
+                                <p class="card-text roboto-mono-p">
                                     In our Data Science 310 project, we utilized Power BI and SQL to analyze COVID-19 data from specific regions worldwide. Our goal was to identify the most effective practices for reducing infection rates.</p>
                                 <button class="btn success">
                                     <a href="https://github.com/tiakorre/Data-Driven-COVID-19-Policy-Solutions/blob/main/ExportedTemplate-Team08.zip" class= "card-link">
@@ -402,8 +503,8 @@
                     <div class="carousel-item">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title"> Money Moves Game</h5>
-                                <p class="card-text">
+                                <h5 class="card-title roboto-mono-p bfont-color " style="font-weight: bold;"> Money Moves Game</h5>
+                                <p class="card-text roboto-mono-p ">
                                     In the Money Moves project from the Fintech Focus Program in the JPMorgan cohort, to developed a web application aimed at improving financial literacy. Using Python, Flask, MongoDB, HTML, and CSS, we created a quiz presented in a game format.</p>
                                 <button class="btn success">
                                     <a href="https://github.com/lk281/money_moves" class= "card-link">
@@ -417,8 +518,8 @@
                     <div class="carousel-item">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title"> Sentiment Bender</h5>
-                                <p class="card-text">
+                                <h5 class="card-title roboto-mono-p bfont-color  " style="font-weight: bold;"> Sentiment Bender</h5>
+                                <p class="card-text roboto-mono-p">
                                     SentimentBender is a project that dives into the complex emotional states of key characters in the renowned animated series "Avatar: The Last Airbender." Using natural language processing techniques, AI, sentiment analysis tools, and data visualization, the series is  decoded and analyzed to discover the sentiments expressed by characters throughout the series. </p>
                                 <button class="btn success">
                                     <a href="https://github.com/tiakorre/SentimentBender-Analyzing-Avatar-The-Last-Airbender-Character-Sentiments" class= "card-link">
@@ -438,16 +539,15 @@
 
 
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" style="background-color: #8F754F;">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+</button>
+
             </div>
         </div>
     </div>
