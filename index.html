@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tia Hannah Portfolio</title>
+    <!-- Required meta tags for Bootstrap -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for your page */
+        /* Style for the icons */
+        .btn {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .btn a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .btn a span {
+            padding-left: 5px;
+        }
+
+        /* On mouse-over */
+        .btn:hover {
+            background: #eee;
+        }
+
+        .success {
+            color: #773344;
+        }
+
+        .fa {
+            padding: 10px;
+            font-size: 25px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+            margin: 15px 20px;
+            border-radius: 70%;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .fa-github {
+            background: #e3e9c2;
+            color: #773344;
+        }
+
+        .fa-file-text-o {
+            background: #e3e9c2;
+            color: #773344;
+        }
+
+        .fa-linkedin {
+            background: #e3e9c2;
+            color: #773344;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #dbd8b3;
+        }
+
+        header {
+            background-color: #333;
+            color: #788585;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+            background-color: #e3e9c2;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Space that separates and creates the page */
+        .full-width {
+            width: 100%;
+            background-color: #dbd8b3;
+            margin-bottom: 20px;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .card {
+            margin: 10px;
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        
+
+        .small-image {
+            width: 150px; /* Adjust the size as needed */
+            height: auto;
+            border-radius: 50px;
+        }
+
+    .bg-color {
+        color: E3E9C2;
+        background-color: E3E9C2;
+    }
+   
+ 
+.press-start-2p-regulari {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 100;
+  font-style: normal;
+  color: #7D8CC4;
+}
+
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: #773344;
+}
+
+.rubik-mono-one-regular {
+  font-family: "Rubik Mono One", monospace;
+  font-weight: 100;
+  font-size: 25px;
+  font-style: normal;
+}
+
+.rubik-mono-one-header {
+  font-family: "Rubik Mono One", monospace;
+  font-weight: 100;
+  font-size: 16px;
+  font-style: normal;
+}
+
+.wfont-color {
+        color: #773344;
+    }
+.bfont-color{
+    color:#8F754F;
+}
+    
+   
+ 
+.press-start-2p-nav {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 10px; /* Corrected to normal */
+    font-style: normal;
+    color: #773344; /* Adjust the color as needed */
+
+}
+ 
+
+.roboto-mono-p {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 275;
+  font-style: normal;
+}
+
+   .form-control {
+        border-radius: 10px; /* Adjust the border-radius as needed */
+        text-align: center; /* Center the text */
+    }
+    .custom-form {
+        background-color: #E3E9C2; /* Set the background color */
+        padding: 20px; /* Add padding for spacing */
+        border-radius: 10px; /* Add border radius for rounded corners */
+    }
+
+    .form-control {
+        background-color: #DBD8B3; /* Set background color of input fields */
+        color: #773344; /* Set color of text inside input fields */
+        margin-bottom: 10px; /* Add margin between input fields */
+    }
+
+    /* Style for the placeholder text */
+    .form-control::placeholder {
+        color: #773344; /* Set color of placeholder text */
+        font-family: "Roboto Mono", monospace;
+    }
+</style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #E3E9C2;">
+<div class="container-fluid">
+    <a class="navbar-brand wfont-color rubik-mono-one-header" href="#home">Tia Hannah</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item press-start-2p-nav">
+                <a class="nav-link wfont-color " href="#aboutme">About Me</a>
+            </li>
+            <li class="nav-item press-start-2p-nav">
+                <a class="nav-link wfont-color" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item press-start-2p-nav">
+                <a class="nav-link wfont-color" href="#resume">Resume</a>
+            </li>
+            <li class="nav-item press-start-2p-nav">
+                <a class="nav-link wfont-color" href="#contact">Contact Me</a>
+            </li>
+        </ul>
+    </div>
+</div>
+</nav>
+    
+    <div id="home" class="full-width">
+        <div class="container">
+            <div class="row vertical-center">
+                <div class="col-md-6 text-center">
+                    <div class="d-flex align-items-center justify-content-center">
+                         
+                           
+                            <div class="pe-3 press-start-2p-regulari">
+                                <h1 id="typing-effect1"></h1> <br>
+                                <h1 class="ms-auto press-start-2p-regulari" id="typing-effect2"></h1>
+                              
+                            </div>
+                        
+                        <div class="ms-5">
+                            <img src="me.jpg" class="small-image w3-grayscale">
+                        </div>
+                    </div>
+                </div>
+                <div id = "welcome" class = "press-start-2p-regular" style="text-align: center;padding-top: 10%; padding-bottom: 0%;"><p>Welcome to my portfolio!</p></div>
+                <div class="col-md-6 text-center">
+                    
+                    <div class="icon-container">
+                        
+                        <a href="https://www.linkedin.com/in/tia-hannah-90b280103/" class="fa fa-linkedin"></a>
+                        <a href="https://github.com/tiakorre" class="fa fa-github"></a>
+                        <!-- Resume Icon -->
+                        <a href="#Resume" class="fa fa-file-text-o"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ABOUT ME SECTION -->
+<div id="aboutme" class="full-width">
+    <div class="container">
+        <h2 class="rubik-mono-one-regular">About Me</h2>
+        <p>Add your introduction here. Talk about your background, skills, and interests.</p>
+        <div class="text-center">
+            <a href="#contact" class="btn btn-primary rounded-pill me-2" style="background-color: #8F754F; color: #E3E9C2; font-family: 'Roboto Mono', monospace;">Email Me</a>
+            <a href="C:\Users\tiako\Downloads\profolioPage\Tia_Hannah_Resume_.pdf" download="Tia_Hannah_Resume_.pdf" class="btn btn-primary rounded-pill" style="background-color: #8F754F; color: #E3E9C2; font-family: 'Roboto Mono', monospace;">Download Resume</a>
+        </div>
+        
+    </div>
+</div>
+
+
+       
+
+<!-- PROJECTS SECTION -->
+    <div id="projects" class="full-width">
+        <div class="container">
+            <h2 class="rubik-mono-one-regular">Projects</h2>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button style="background-color: #773344;" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button style="background-color: #773344;" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button style="background-color: #773344;"type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button style="background-color: #773344;"type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                        <button style="background-color: #773344;"type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                        <button style="background-color: #773344;"type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                        aria-label="Slide 6"></button>
+                        <button style="background-color: #773344;"type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"
+                        aria-label="Slide 7"></button>
+                        <button style="background-color: #773344;"type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7"
+                        aria-label="Slide 8"></button>
+
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"> IMDB Movie and Tv Analysis 
+                                </h5>
+                                <p class="card-text">
+                                    This Rust project analyzes a dataset of top movies and TV shows from IMDB, building a graph connecting movies and directors based on metascores. It then calculates the degree centrality of each node.</p>
+                                    <button class="btn success">
+                                        <a href="https://github.com/tiakorre/imdb-movie-tv-analysis-rust/blob/main/README.md" class="card-link">
+                                            <span>&rarr;</span>
+                                        </a>
+                                    </button>
+                              
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Pixel Runner Game
+                                </h5>
+                                <p class="card-text">Pixel Runner Game is a simple 2D runner built with Python's Pygame library. Players control a character jumping over moving snails to score points.</p>
+                                <button class="btn success">
+                                    <a href="https://github.com/tiakorre/Pixel_Runner_Game" class= "card-link">
+                                        <span>&rarr;</span>
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Flight Data Analysis</h5>
+                                <p class="card-text">This project aims to provide comprehensive exploratory data analysis (EDA) of flight data, offering valuable insights into patterns, trends, and anomalies.</p>
+                                <button class="btn success">
+                                    <a href="https://github.com/tiakorre/EDA_Flight_Data" class= "card-link">
+                                        <span>&rarr;</span>
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Editor AI</h5>
+                                <p class="card-text">Editor AI is a collaborative project under Spark that aims to create an application to assist micro newspapers with editing through an AI-powered style editor.</p>
+                                <button class="btn success">
+                                    <a href="https://github.com/tiakorre/se-editor-ai" class= "card-link">
+                                        <span>&rarr;</span>
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">MAPLE (Bill Summarization, Tagging, Explanation)</h5>
+                                <p class="card-text">
+                                    This project simplifies Massachusetts bills for the MAPLE Platform by generating summaries and category tags using machine learning. It aims to make legal language more understandable (9th-grade level) and includes a pipeline for bill processing, a dashboard for text display and saving, and integration into the MAPLE platform.</p>
+                                <button class="btn success">
+                                    <a href="https://github.com/tiakorre/ml-maple-bill-summarization" class= "card-link">
+                                        <span>&rarr;</span>
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"> Data Driven COVID-19 Policy Recommendations</h5>
+                                <p class="card-text">
+                                    In our Data Science 310 project, we utilized Power BI and SQL to analyze COVID-19 data from specific regions worldwide. Our goal was to identify the most effective practices for reducing infection rates.</p>
+                                <button class="btn success">
+                                    <a href="https://github.com/tiakorre/Data-Driven-COVID-19-Policy-Solutions/blob/main/ExportedTemplate-Team08.zip" class= "card-link">
+                                        <span>&rarr;</span>
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"> Money Moves Game</h5>
+                                <p class="card-text">
+                                    In the Money Moves project from the Fintech Focus Program in the JPMorgan cohort, to developed a web application aimed at improving financial literacy. Using Python, Flask, MongoDB, HTML, and CSS, we created a quiz presented in a game format.</p>
+                                <button class="btn success">
+                                    <a href="https://github.com/lk281/money_moves" class= "card-link">
+                                        <span>&rarr;</span>
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"> Sentiment Bender</h5>
+                                <p class="card-text">
+                                    SentimentBender is a project that dives into the complex emotional states of key characters in the renowned animated series "Avatar: The Last Airbender." Using natural language processing techniques, AI, sentiment analysis tools, and data visualization, the series is  decoded and analyzed to discover the sentiments expressed by characters throughout the series. </p>
+                                <button class="btn success">
+                                    <a href="https://github.com/tiakorre/SentimentBender-Analyzing-Avatar-The-Last-Airbender-Character-Sentiments" class= "card-link">
+                                        <span>&rarr;</span>
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="resume" class="full-width">
+        <div class="container">
+            <h2 class="rubik-mono-one-regular">Resume</h2>
+            <p >Provide a brief summary or link to download your full resume.</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="contact" class="full-width">
+        <div class="container custom-form">
+            <h2 class="rubik-mono-one-regular wfont-color" style="text-align: center;">Contact Me</h2>
+            <p class="roboto-mono-p bfont-color" style="text-align: center;">Feel free to reach out with any questions or opportunities :)</p>
+    
+            <!-- Contact Form -->
+            <form action="https://formspree.io/f/xayralyg" method="post">
+                <div class="mb-3 ">
+                    <input type="text" class="form-control rounded-pill " id="name" name="name" placeholder="Name" required>
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control rounded-pill" id="email" name="_replyto" placeholder="Email" required>
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control rounded-pill" id="subject" name="subject" placeholder="Subject" required>
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control rounded" id="message" name="message" rows="5" placeholder="Message" required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary rounded-pill bfont-color" style="background-color: #8F754F; color: #E3E9C2; font-family: Roboto Mono, monospace;">Submit</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+    
+    
+ 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    
+</script>
+ <script>// Define the text you want to type
+    const textToType1 = "Hello, World.";
+    const textToType2 = "I'm Tia.";
+    
+    // Get the elements where you want to display the typing effect
+    const typingElement1 = document.getElementById("typing-effect1");
+    const typingElement2 = document.getElementById("typing-effect2");
+    
+    // Function to simulate typing effect
+    function typeText(text, element, index) {
+        if (index < text.length) {
+            // Append the next character to the typing element
+            element.textContent += text.charAt(index);
+    
+            // Wait for a short delay before typing the next character
+            setTimeout(function() {
+                typeText(text, element, index + 1);
+            }, 100); // Adjust typing speed as needed
+        }
+    }
+    
+    // Start typing the text for the first element
+    typeText(textToType1, typingElement1, 0);
+    
+    // Start typing the text for the second element after a delay
+    setTimeout(function() {
+        typeText(textToType2, typingElement2, 0);
+    }, textToType1.length * 100); // Delay based on the length of the first text
+    </script>
+</body>
+
+</html>
