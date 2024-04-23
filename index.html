@@ -248,7 +248,59 @@
 .sql { width: 60%; } 
 .ssh { width: 40%; } 
 .js { width: 65%; } 
-/* Add more styles as needed */
+/* Media queries for responsiveness */
+/* Media queries for responsiveness */
+@media (max-width: 576px) {
+    /* Adjust the image size for smart phones */
+    .small-image {
+        width: 150px; /* Adjust the size as needed */
+    }
+
+    /* Adjust the font size of h1 for smart phones */
+    #typing-effect1,
+    #typing-effect2 {
+        font-size: 1.5rem; /* Adjust the font size as needed */
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    /* Adjust the image size for iPad */
+    .small-image {
+        width: 200px; /* Adjust the size as needed */
+    }
+
+    /* Adjust the font size of h1 for iPad */
+    #typing-effect1,
+    #typing-effect2 {
+        font-size: 2rem; /* Adjust the font size as needed */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Adjust the image size for large HP laptop */
+    .small-image {
+        width: 280px; /* Adjust the size as needed */
+    }
+
+    /* Adjust the font size of h1 for large HP laptop */
+    #typing-effect1,
+    #typing-effect2 {
+        font-size: 2.75rem; /* Adjust the font size as needed */
+    }
+}
+
+@media (min-width: 1025px) {
+    /* Adjust the image size for Apple computer */
+    .small-image {
+        width: 330px; /* Adjust the size as needed */
+    }
+
+    /* Adjust the font size of h1 for Apple computer */
+    #typing-effect1,
+    #typing-effect2 {
+        font-size: 3rem; /* Adjust the font size as needed */
+    }
+}
 
 </style>
 </head>
@@ -279,12 +331,12 @@
     </div>
 </div>
 </nav>
-    
+  <br>  
 <div id="home" class="full-width">
     <div class="container">
-        <div class="row vertical-center">
+        <div class="row align-items-center">
             <!-- Half width column for the text -->
-            <div class="col-md-6 text-center">
+            <div class="col-md-6 text-md-start text-center mb-4 mb-md-0">
                 <div class="pe-3 press-start-2p-regulari">
                     <h1 id="typing-effect1"></h1>
                     <h1 class="ms-auto press-start-2p-regulari" id="typing-effect2"></h1>
@@ -295,25 +347,26 @@
             <div class="col-md-6 text-center">
                 <img src="me.jpg" class="small-image w3-grayscale">
             </div>
-            <!-- Welcome message -->
-            <div id="welcome" class="col-md-12 text-center press-start-2p-regular" style="padding-top: 10%; padding-bottom: 0%;">
-                <p>Welcome to my portfolio!</p>
-            </div>
-            <!-- Social icons -->
-            <div class="col-md-12 text-center">
-                <div class="icon-container">
-                    <a href="https://www.linkedin.com/in/tia-hannah-90b280103/" class="fa fa-linkedin"></a>
-                    <a href="https://github.com/tiakorre" class="fa fa-github"></a>
-                    <!-- Resume Icon -->
-                    <a href="#resume" class="fa fa-file-text-o"></a>
+        </div>
 
-                </div>
+        <!-- Welcome message -->
+        <div id="welcome" class="col-md-12 text-center press-start-2p-regular" style="padding-top: 10%; padding-bottom: 0%;">
+            <p>Welcome to my portfolio!</p>
+        </div>
+        <!-- Social icons -->
+        <div class="col-md-12 text-center">
+            <div class="icon-container">
+                <a href="https://www.linkedin.com/in/tia-hannah-90b280103/" class="fa fa-linkedin"></a>
+                <a href="https://github.com/tiakorre" class="fa fa-github"></a>
+                <!-- Resume Icon -->
+                <a href="#resume" class="fa fa-file-text-o"></a>
             </div>
         </div>
     </div>
 </div>
 
-<br>
+
+<br><br>
 <!-- ABOUT ME SECTION -->
 <div id="aboutme" class="full-width">
     <div class="container">
