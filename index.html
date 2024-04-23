@@ -249,11 +249,11 @@
 .ssh { width: 40%; } 
 .js { width: 65%; } 
 /* Media queries for responsiveness */
-/* Media queries for responsiveness */
+
 @media (max-width: 576px) {
     /* Adjust the image size for smart phones */
     .small-image {
-        width: 150px; /* Adjust the size as needed */
+        width: 50%; /* Adjust the size as needed */
     }
 
     /* Adjust the font size of h1 for smart phones */
@@ -266,7 +266,7 @@
 @media (min-width: 577px) and (max-width: 768px) {
     /* Adjust the image size for iPad */
     .small-image {
-        width: 200px; /* Adjust the size as needed */
+        width: 40%; /* Adjust the size as needed */
     }
 
     /* Adjust the font size of h1 for iPad */
@@ -279,7 +279,7 @@
 @media (min-width: 769px) and (max-width: 1024px) {
     /* Adjust the image size for large HP laptop */
     .small-image {
-        width: 280px; /* Adjust the size as needed */
+        width: 68%; /* Adjust the size as needed */
     }
 
     /* Adjust the font size of h1 for large HP laptop */
@@ -289,10 +289,10 @@
     }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1025px)and (max-width: 1098px)  {
     /* Adjust the image size for Apple computer */
     .small-image {
-        width: 330px; /* Adjust the size as needed */
+        width: 69%; /* Adjust the size as needed */
     }
 
     /* Adjust the font size of h1 for Apple computer */
@@ -301,7 +301,18 @@
         font-size: 3rem; /* Adjust the font size as needed */
     }
 }
+@media (min-width: 1098px) {
+    /* Adjust the image size for Apple computer */
+    .small-image {
+        width: 80%; /* Adjust the size as needed */
+    }
 
+    /* Adjust the font size of h1 for Apple computer */
+    #typing-effect1,
+    #typing-effect2 {
+        font-size: 4rem; /* Adjust the font size as needed */
+    }
+}
 </style>
 </head>
 
