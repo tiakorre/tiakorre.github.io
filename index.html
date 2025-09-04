@@ -475,7 +475,7 @@ font-style: normal;
                 <a href="https://www.linkedin.com/in/tia-hannah-90b280103/" target="_blank" class="fa fa-linkedin"></a>
                 <a href="https://github.com/tiakorre" target="_blank" class="fa fa-github"></a>
                 <!-- Resume Icon -->
-                <a href="#resume" class="fa fa-file-text-o"></a>
+                <a href="#resume" class="fa fa-file-text-o"id="resumeIcon"></a>
             </div>
         </div>
     </div>
@@ -920,6 +920,25 @@ const screenWidthElement = document.getElementById("screenWidth");
 screenWidthElement.textContent = "Screen Width: " + screenWidth + "px";
 </script>
     </script>
+div>
+
+<script>
+document.getElementById('resumeIcon').addEventListener('click', function(e) {
+    e.preventDefault(); // Prevent default jump for a moment
+
+    // Scroll smoothly to #resume
+    document.querySelector('#resume').scrollIntoView({ behavior: 'smooth' });
+
+    // Trigger PDF download
+    const link = document.createElement('a');
+    link.href = './Tia_Hannah_Resume.pdf'; // Adjust path if needed
+    link.download = 'Tia_Hannah_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
+</script>
+
 </body>
 
 </html>
