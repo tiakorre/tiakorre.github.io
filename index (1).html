@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tia Hannah Portfolio</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tia Hannah: IT support specialist and data science student in New York. Projects, experience, and resume.">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:wght@300;400;500;600&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+
+    <style>
+        /* ---------- Palette ---------- */
+        :root {
+            --wine: #773344;
+            --sage: #E3E9C2;
+            --sand: #DBD8B3;
+            --gold: #8F754F;
+            --periwinkle: #7D8CC4;
+            --lilac: #D2BFD3;
+            --ink: #4A3B2A;
+            --nav-height: 64px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
+        body {
+            font-family: "Roboto Mono", monospace;
+            margin: 0;
+            padding: 0;
+            background-color: var(--sand);
+            color: var(--ink);
+        }
+
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible,
+        textarea:focus-visible {
+            outline: 3px solid var(--periwinkle);
+            outline-offset: 3px;
+        }
+
+        /* ---------- Fonts ---------- */
+        .press-start-2p-regulari {
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            color: var(--periwinkle);
+        }
+
+        .press-start-2p-regular {
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            color: var(--wine);
+        }
+
+        .rubik-mono-one-regular {
+            font-family: "Rubik Mono One", monospace;
+            font-size: clamp(1.4rem, 3vw, 1.75rem);
+            color: var(--wine);
+            margin-bottom: 1.75rem;
+        }
+
+        .rubik-mono-one-header {
+            font-family: "Rubik Mono One", monospace;
+            font-size: 16px;
+        }
+
+        .press-start-2p-nav {
+            font-family: "Press Start 2P", system-ui;
+            font-size: 10px;
+        }
+
+        .roboto-mono-p {
+            font-family: "Roboto Mono", monospace;
+            font-weight: 400;
+            line-height: 1.75;
+        }
+
+        .wfont-color {
+            color: var(--wine);
+        }
+
+        .bfont-color {
+            color: var(--gold);
+        }
+
+        /* ---------- Layout and spacing ---------- */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 0 rgba(119, 51, 68, 0.15);
+        }
+
+        .section {
+            padding: clamp(3.5rem, 8vw, 6rem) 1rem;
+            scroll-margin-top: var(--nav-height);
+        }
+
+        .hero {
+            min-height: calc(100vh - var(--nav-height));
+            display: flex;
+            align-items: center;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            padding: clamp(1.5rem, 4vw, 3rem);
+            max-width: 1100px;
+            margin: auto;
+            background-color: var(--sage);
+            border-radius: 12px;
+            box-shadow: 6px 6px 0 rgba(119, 51, 68, 0.12);
+        }
+
+        .card {
+            margin: 10px;
+        }
+
+        /* ---------- Hero ---------- */
+        #typing-effect1,
+        #typing-effect2 {
+            font-size: clamp(1.4rem, 4.5vw, 3.5rem);
+            line-height: 1.5;
+            min-height: 1.5em;
+        }
+
+        .small-image {
+            width: min(80%, 360px);
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 24px 12px 0 rgba(119, 51, 68, 0.12);
+        }
+
+        .welcome {
+            padding-top: 2.5rem;
+            margin-bottom: 0;
+            font-size: 0.85rem;
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .icon-container .fa {
+            padding: 12px;
+            font-size: 25px;
+            width: 52px;
+            text-align: center;
+            text-decoration: none;
+            margin: 10px 16px;
+            border-radius: 50%;
+            background: var(--sand);
+            color: var(--wine);
+        }
+
+        .icon-container .fa:hover {
+            opacity: 0.75;
+        }
+
+        /* ---------- Buttons ---------- */
+        .pill-btn {
+            display: inline-block;
+            font-family: "Roboto Mono", monospace;
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 0.6rem 1.4rem;
+            margin: 0.35rem;
+            border-radius: 999px;
+            border: 2px solid var(--wine);
+            background-color: var(--wine);
+            color: var(--sage);
+            text-decoration: none;
+        }
+
+        .pill-btn:hover {
+            background-color: transparent;
+            color: var(--wine);
+        }
+
+        .pill-btn.secondary {
+            background-color: transparent;
+            color: var(--wine);
+        }
+
+        .pill-btn.secondary:hover {
+            background-color: var(--wine);
+            color: var(--sage);
+        }
+
+        /* Project carousel arrow buttons (unchanged behavior) */
+        .btn {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .btn a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .btn a span {
+            padding-left: 5px;
+        }
+
+        .btn:hover {
+            background: #eee;
+        }
+
+        .success {
+            color: var(--wine);
+        }
+
+        /* ---------- About ---------- */
+        .about-text p {
+            max-width: 68ch;
+            color: var(--ink);
+            margin-bottom: 1.1rem;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem 2rem;
+            margin: 2.25rem 0;
+        }
+
+        .skill-name {
+            margin-bottom: 0.5rem;
+            font-family: "Press Start 2P", system-ui;
+            font-size: 10px;
+            color: var(--wine);
+        }
+
+        .skill-graph {
+            width: 100%;
+            max-width: 240px;
+            height: 16px;
+            background-color: var(--sand);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .skill-level {
+            height: 100%;
+            background-color: var(--gold);
+        }
+
+        .html { width: 80%; }
+        .css { width: 70%; }
+        .python { width: 90%; }
+        .r { width: 57%; }
+        .rust { width: 45%; }
+        .sql { width: 60%; }
+        .ssh { width: 40%; }
+        .js { width: 65%; }
+
+        /* ---------- Services ---------- */
+        .services-intro {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .services-intro p {
+            color: var(--gold);
+            font-size: 0.9rem;
+            margin: 0.75rem 0 1rem;
+        }
+
+        .service-head {
+            color: var(--gold);
+            font-family: "Press Start 2P", system-ui;
+            font-size: 10px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .services {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem 2.5rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .service {
+            text-align: center;
+            max-width: 150px;
+        }
+
+        .service-icon {
+            width: 110px;
+            height: 110px;
+            background-color: var(--wine);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 0.85rem;
+        }
+
+        .service-icon .fa {
+            color: var(--sage);
+            font-size: 34px;
+        }
+
+        /* ---------- Timeline ---------- */
+        .timeline-heading {
+            font-family: "Rubik Mono One", monospace;
+            font-size: 1.05rem;
+            color: var(--wine);
+            max-width: 760px;
+            margin: 0 auto 2rem;
+        }
+
+        .timeline {
+            list-style: none;
+            position: relative;
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 9px;
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            background-color: var(--wine);
+        }
+
+        .tl-item {
+            position: relative;
+            padding: 0 0 2.5rem 3rem;
+        }
+
+        .tl-item:last-child {
+            padding-bottom: 0;
+        }
+
+        /* Square pixel markers to match the pixel type */
+        .tl-marker {
+            position: absolute;
+            left: 2px;
+            top: 3px;
+            width: 16px;
+            height: 16px;
+            background-color: var(--sage);
+            border: 3px solid var(--wine);
+        }
+
+        .tl-item.is-current .tl-marker {
+            background-color: var(--wine);
+            box-shadow: 0 0 0 4px var(--lilac);
+        }
+
+        .tl-date {
+            font-family: "Press Start 2P", system-ui;
+            font-size: 0.6rem;
+            line-height: 1.9;
+            color: var(--gold);
+            margin: 0 0 0.45rem;
+        }
+
+        .tl-role {
+            font-family: "Roboto Mono", monospace;
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--wine);
+            margin: 0;
+        }
+
+        .tl-org {
+            font-size: 0.9rem;
+            color: var(--gold);
+            margin: 0.2rem 0 0.6rem;
+        }
+
+        .tl-desc {
+            font-size: 0.92rem;
+            line-height: 1.7;
+            color: var(--ink);
+            max-width: 62ch;
+            margin: 0;
+        }
+
+        .resume-cta {
+            text-align: center;
+            margin-top: 3.5rem;
+        }
+
+        /* ---------- Contact ---------- */
+        .custom-form {
+            max-width: 720px;
+        }
+
+        .custom-form .intro {
+            text-align: center;
+            color: var(--ink);
+            margin-bottom: 1.75rem;
+        }
+
+        .form-control {
+            border-radius: 10px;
+            background-color: var(--sand);
+            color: var(--wine);
+            border: 2px solid transparent;
+            margin-bottom: 0.9rem;
+        }
+
+        .form-control:focus {
+            background-color: var(--sand);
+            border-color: var(--wine);
+            box-shadow: none;
+            color: var(--wine);
+        }
+
+        .form-control::placeholder {
+            color: var(--wine);
+            opacity: 0.8;
+            font-family: "Roboto Mono", monospace;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--gold);
+            padding: 0 1rem 2.5rem;
+        }
+
+        @media (max-width: 576px) {
+            .tl-item {
+                padding-left: 2.25rem;
+            }
+
+            .welcome {
+                font-size: 0.7rem;
+                line-height: 1.8;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #E3E9C2;">
+        <div class="container-fluid">
+            <a class="navbar-brand wfont-color rubik-mono-one-header" href="#home">Tia Hannah</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item press-start-2p-nav">
+                        <a class="nav-link wfont-color" href="#aboutme">About Me</a>
+                    </li>
+                    <li class="nav-item press-start-2p-nav">
+                        <a class="nav-link wfont-color" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item press-start-2p-nav">
+                        <a class="nav-link wfont-color" href="#resume">Experience</a>
+                    </li>
+                    <li class="nav-item press-start-2p-nav">
+                        <a class="nav-link wfont-color" href="#contact">Contact Me</a>
+                    </li>
+                    <li class="nav-item press-start-2p-nav">
+                        <a class="nav-link wfont-color" href="Tia_Hannah_Resume.pdf" download>Resume</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HOME -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-md-start text-center mb-4 mb-md-0">
+                    <div class="pe-md-3 press-start-2p-regulari">
+                        <h1 id="typing-effect1" aria-label="Hello, World."></h1>
+                        <h1 class="press-start-2p-regulari" id="typing-effect2" aria-label="I'm Tia."></h1>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="me.jpg" class="small-image" alt="Portrait of Tia Hannah">
+                </div>
+            </div>
+
+            <p class="welcome text-center press-start-2p-regular">Welcome to my portfolio!</p>
+
+            <div class="icon-container">
+                <a href="https://www.linkedin.com/in/tiakhannah" target="_blank" rel="noopener" class="fa fa-linkedin" aria-label="LinkedIn"></a>
+                <a href="https://github.com/tiakorre" target="_blank" rel="noopener" class="fa fa-github" aria-label="GitHub"></a>
+                <a href="Tia_Hannah_Resume.pdf" download class="fa fa-file-text-o" aria-label="Download resume (PDF)"></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT ME -->
+    <section id="aboutme" class="section">
+        <div class="container">
+            <h2 class="rubik-mono-one-regular">About Me</h2>
+
+            <div class="about-text roboto-mono-p">
+                <p>I'm Tia Hannah, an IT support specialist and data science student based in New York. I've spent the last few years on the help desk and in the field at Boston University, fixing hardware, software, and network issues for thousands of students, faculty, and staff, and writing the documentation that keeps fixes consistent across a team.</p>
+                <p>On the technical side, I work in Python, SQL, JavaScript, HTML, and CSS. I've built REST API integrations, dashboards in Looker Studio, Tableau, and Power BI, and full-stack apps with Flask and Next.js. I'm finishing my B.S. in Data Science at Boston University and completing IT Support training with Per Scholas, with my CompTIA A+ expected in October 2026.</p>
+                <p>What I enjoy most is the space between people and systems: figuring out why something broke, fixing it, and making sure it doesn't break the same way twice.</p>
+            </div>
+
+            <div class="skills">
+                <div class="skill">
+                    <div class="skill-name">HTML/CSS</div>
+                    <div class="skill-graph"><div class="skill-level html"></div></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">Tableau</div>
+                    <div class="skill-graph"><div class="skill-level css"></div></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">Python</div>
+                    <div class="skill-graph"><div class="skill-level python"></div></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">Typescript/Javascript</div>
+                    <div class="skill-graph"><div class="skill-level js"></div></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">R</div>
+                    <div class="skill-graph"><div class="skill-level r"></div></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">SQL</div>
+                    <div class="skill-graph"><div class="skill-level sql"></div></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">Rust</div>
+                    <div class="skill-graph"><div class="skill-level rust"></div></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">SSH</div>
+                    <div class="skill-graph"><div class="skill-level ssh"></div></div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="#contact" class="pill-btn">Email me</a>
+                <a href="Tia_Hannah_Resume.pdf" download class="pill-btn secondary">Download resume</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION (content unchanged) -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="rubik-mono-one-regular">Projects</h2>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button style="background-color: #773344;" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button style="background-color: #773344;" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button style="background-color: #773344;" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button style="background-color: #773344;" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button style="background-color: #773344;" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                    <button style="background-color: #773344;" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                        aria-label="Slide 6"></button>
+                    <button style="background-color: #773344;" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"
+                        aria-label="Slide 7"></button>
+                    <button style="background-color: #773344;" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7"
+                        aria-label="Slide 8"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title roboto-mono-p bfont-color" style="font-weight: bold;">IMDB Movie and Tv Analysis</h5>
+                                <p class="card-text roboto-mono-p">
+                                    This Rust project analyzes a dataset of top movies and TV shows from IMDB, building a graph connecting movies and directors based on metascores. It then calculates the degree centrality of each node.</p>
+                                <button class="btn success">
+                                    <a href="https://github.com/tiakorre/imdb-movie-tv-analysis-rust/blob/main/README.md" target="_blank" class="card-link">
+                                        <span>&rarr;</span>
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title roboto-mono-p bfont-color" style="font-weight: bold;">Pixel Runner Game</h5>
+                                <p class="card-text roboto-mono-p">Pixel Runner Game is a simple 2D runner built with Python's Pygame library. Players control a character jumping over moving snails to score points.</p>
+                                <button class="btn success">
+                                    <a href="https://github.com/tiakorre/Pixel_Runner_Game" target="_blank" class="card-link">
+                                        <span>&rarr;</span>
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title roboto-mono-p bfont-color" style="font-weight: bold;">Flight Data Analysis</h5>
+                                <p class="card-text roboto-mono-p">This project aims to provide comprehensive exploratory data analysis (EDA) of flight data, offering valuable insights into patterns, trends, and anomalies.</p>
+                                <button class="btn success">
+                                    <a href="https://github.com/tiakorre/EDA_Flight_Data" target="_blank" class="card-link">
+                                        <span>&rarr;</span>
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title roboto-mono-p bfont-color" style="font-weight: bold;">Editor AI</h5>
+                                <p class="card-text roboto-mono-p">Editor AI is a collaborative project under Spark that aims to create an application to assist micro newspapers with editing through an AI-powered style editor.</p>
+                                <button class="btn success">
+                                    <a href="https://github.com/tiakorre/se-editor-ai" target="_blank" class="card-link">
+                                        <span>&rarr;</span>
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title roboto-mono-p bfont-color" style="font-weight: bold;">MAPLE (Bill Summarization, Tagging, Explanation)</h5>
+                                <p class="card-text roboto-mono-p">
+                                    This project simplifies Massachusetts bills for the MAPLE Platform by generating summaries and category tags using machine learning. It aims to make legal language more understandable (9th-grade level) and includes a pipeline for bill processing, a dashboard for text display and saving, and integration into the MAPLE platform.The code for the project is on my github however, the arrow link belows goes to the deployed project.</p>
+                                <button class="btn success">
+                                    <a href="https://maple-billsummarization.streamlit.app/" target="_blank" class="card-link">
+                                        <span>&rarr;</span>
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title roboto-mono-p bfont-color" style="font-weight: bold;">Data Driven COVID-19 Policy Recommendations</h5>
+                                <p class="card-text roboto-mono-p">
+                                    In our Data Science 310 project, we utilized Power BI and SQL to analyze COVID-19 data from specific regions worldwide. Our goal was to identify the most effective practices for reducing infection rates.</p>
+                                <button class="btn success">
+                                    <a href="https://github.com/tiakorre/Data-Driven-COVID-19-Policy-Solutions/blob/main/ExportedTemplate-Team08.zip" target="_blank" class="card-link">
+                                        <span>&rarr;</span>
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title roboto-mono-p bfont-color" style="font-weight: bold;">Money Moves Game</h5>
+                                <p class="card-text roboto-mono-p">
+                                    In the Money Moves project from the Fintech Focus Program in the JPMorgan cohort, to developed a web application aimed at improving financial literacy. Using Python, Flask, MongoDB, HTML, and CSS, we created a quiz presented in a game format.</p>
+                                <button class="btn success">
+                                    <a href="https://github.com/lk281/money_moves" target="_blank" class="card-link">
+                                        <span>&rarr;</span>
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title roboto-mono-p bfont-color" style="font-weight: bold;">Sentiment Bender</h5>
+                                <p class="card-text roboto-mono-p">
+                                    SentimentBender is a project that dives into the complex emotional states of key characters in the renowned animated series "Avatar: The Last Airbender." Using natural language processing techniques, AI, sentiment analysis tools, and data visualization, the series is  decoded and analyzed to discover the sentiments expressed by characters throughout the series. </p>
+                                <button class="btn success">
+                                    <a href="https://github.com/tiakorre/SentimentBender-Analyzing-Avatar-The-Last-Airbender-Character-Sentiments" target="_blank" class="card-link">
+                                        <span>&rarr;</span>
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" style="background-color: #8F754F;">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE AND SERVICES -->
+    <section id="resume" class="section">
+        <div class="container">
+            <h2 class="rubik-mono-one-regular">Experience &amp; Services</h2>
+
+            <div class="services-intro">
+                <h3 class="service-head">Services Offered</h3>
+                <p>Smart solutions, delivered with care :)</p>
+                <a href="#contact" class="pill-btn">Contact me</a>
+            </div>
+
+            <div class="services">
+                <div class="service">
+                    <div class="service-icon"><i class="fa fa-bar-chart" aria-hidden="true"></i></div>
+                    <p class="service-head">Data Analytics &amp; Insights</p>
+                </div>
+                <div class="service">
+                    <div class="service-icon"><i class="fa fa-server" aria-hidden="true"></i></div>
+                    <p class="service-head">Automation &amp; AI Solutions</p>
+                </div>
+                <div class="service">
+                    <div class="service-icon"><i class="fa fa-database" aria-hidden="true"></i></div>
+                    <p class="service-head">Data Management &amp; ETL</p>
+                </div>
+            </div>
+
+            <h3 class="timeline-heading">Timeline</h3>
+
+            <ol class="timeline">
+                <li class="tl-item is-current">
+                    <span class="tl-marker" aria-hidden="true"></span>
+                    <p class="tl-date">Now: Expected Oct 2026</p>
+                    <h4 class="tl-role">IT Support Training</h4>
+                    <p class="tl-org">Per Scholas, Train &amp; Earn Tech, New York, NY</p>
+                    <p class="tl-desc">IT support training alongside my certifications: Google IT Support Professional Certificate (Aug 2026), Google AI Professional Certificate (Sept 2026), and CompTIA A+ (expected Oct 2026).</p>
+                </li>
+
+                <li class="tl-item">
+                    <span class="tl-marker" aria-hidden="true"></span>
+                    <p class="tl-date">Sept 2025 – Mar 2026</p>
+                    <h4 class="tl-role">Night Auditor (PM IT Systems Support)</h4>
+                    <p class="tl-org">Holiday Inn, New York, NY</p>
+                    <p class="tl-desc">Sole overnight point of contact for escalated technical support. Troubleshot Opera PMS issues, installs, and upgrades, and wrote the procedures used to train front desk staff during the platform migration.</p>
+                </li>
+
+                <li class="tl-item">
+                    <span class="tl-marker" aria-hidden="true"></span>
+                    <p class="tl-date">Aug 2025 – Jan 2026</p>
+                    <h4 class="tl-role">Growth &amp; Go-to-Market Analyst Intern</h4>
+                    <p class="tl-org">Leagueswype, Remote</p>
+                    <p class="tl-desc">Built automated acquisition dashboards and engagement pipelines for an AI product launch, driving 500K+ views and 250 early-access signups.</p>
+                </li>
+
+                <li class="tl-item">
+                    <span class="tl-marker" aria-hidden="true"></span>
+                    <p class="tl-date">Aug 2024 – May 2025</p>
+                    <h4 class="tl-role">IT Support Specialist</h4>
+                    <p class="tl-org">BU Metropolitan College IT, Boston, MA</p>
+                    <p class="tl-desc">Resolved 100+ ServiceNow tickets for 500+ faculty, staff, and students, cut average resolution time by 15%, and documented 35+ standardized solutions that improved first-contact resolution.</p>
+                </li>
+
+                <li class="tl-item">
+                    <span class="tl-marker" aria-hidden="true"></span>
+                    <p class="tl-date">Sept 2022 – Jan 2024</p>
+                    <h4 class="tl-role">IT Consultant (IT Field Technician)</h4>
+                    <p class="tl-org">BU College of Engineering IT, Boston, MA</p>
+                    <p class="tl-desc">Supported 1,000+ students, faculty, and staff across Windows, macOS, and research workstations, and trained new hires on the team's ticket workflow and documentation.</p>
+                </li>
+
+                <li class="tl-item">
+                    <span class="tl-marker" aria-hidden="true"></span>
+                    <p class="tl-date">Feb – Mar 2023</p>
+                    <h4 class="tl-role">Hackathons</h4>
+                    <p class="tl-org">Boston University</p>
+                    <p class="tl-desc">Placed 2nd at the Data4Sustainability Datathon by predicting the waste each campus building produces. At the Tech for Change Civic Tech Hackathon, built an app to find the closest and cheapest food items nearby.</p>
+                </li>
+
+                <li class="tl-item">
+                    <span class="tl-marker" aria-hidden="true"></span>
+                    <p class="tl-date">Sept 2021 – Expected May 2027</p>
+                    <h4 class="tl-role">B.S. Data Science</h4>
+                    <p class="tl-org">Boston University, Boston, MA</p>
+                    <p class="tl-desc">Coursework in Programming for Data Science, Data Mechanics, Statistics, and Linear Algebra. Member of BU Cybersecurity Association, Stock Trading at BU, and BU Spark.</p>
+                </li>
+
+                <li class="tl-item">
+                    <span class="tl-marker" aria-hidden="true"></span>
+                    <p class="tl-date">Jun 2021 – Aug 2021</p>
+                    <h4 class="tl-role">Fintech Focus Program</h4>
+                    <p class="tl-org">Upperline Code, JPMorgan Chase &amp; Co. Cohort</p>
+                    <p class="tl-desc">Built and presented Money Moves, a financial literacy quiz game made with Python, Flask, MongoDB, HTML, and CSS.</p>
+                </li>
+            </ol>
+
+            <div class="resume-cta">
+                <a href="Tia_Hannah_Resume.pdf" download class="pill-btn">Download full resume (PDF)</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+        <div class="container custom-form">
+            <h2 class="rubik-mono-one-regular" style="text-align: center;">Contact Me</h2>
+            <p class="intro roboto-mono-p">Feel free to reach out with any questions or opportunities :)</p>
+
+            <form action="https://formspree.io/f/xayralyg" method="post">
+                <label for="name" class="visually-hidden">Name</label>
+                <input type="text" class="form-control rounded-pill" id="name" name="name" placeholder="Name" required>
+
+                <label for="email" class="visually-hidden">Email</label>
+                <input type="email" class="form-control rounded-pill" id="email" name="_replyto" placeholder="Email" required>
+
+                <label for="subject" class="visually-hidden">Subject</label>
+                <input type="text" class="form-control rounded-pill" id="subject" name="subject" placeholder="Subject" required>
+
+                <label for="message" class="visually-hidden">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Message" required></textarea>
+
+                <div class="text-center mt-2">
+                    <button type="submit" class="pill-btn">Send message</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>&copy; 2026 Tia Hannah</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const textToType1 = "Hello, World.";
+        const textToType2 = "I'm Tia.";
+        const typingElement1 = document.getElementById("typing-effect1");
+        const typingElement2 = document.getElementById("typing-effect2");
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        if (reduceMotion) {
+            // Show the text right away for people who turn off motion
+            typingElement1.textContent = textToType1;
+            typingElement2.textContent = textToType2;
+        } else {
+            // Types "Hello, World." on a loop
+            function typeText1(text, element, index) {
+                if (index < text.length) {
+                    element.textContent += text.charAt(index);
+                    setTimeout(function () {
+                        typeText1(text, element, index + 1);
+                    }, 100);
+                } else {
+                    setTimeout(function () {
+                        element.textContent = "";
+                        typeText1(textToType1, element, 0);
+                    }, 1000);
+                }
+            }
+
+            // Types "I'm Tia." once
+            function typeText2(text, element, index) {
+                if (index < text.length) {
+                    element.textContent += text.charAt(index);
+                    setTimeout(function () {
+                        typeText2(text, element, index + 1);
+                    }, 100);
+                }
+            }
+
+            typeText1(textToType1, typingElement1, 0);
+            setTimeout(function () {
+                typeText2(textToType2, typingElement2, 0);
+            }, textToType1.length * 100 + 100);
+        }
+    </script>
+</body>
+
+</html>
